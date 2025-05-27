@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kỷ Yếu Lớp</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="overlay"></div>
+    <header>
+        <h1>Kỷ Yếu Lớp Chúng Ta</h1>
+        <p>Những khoảnh khắc đáng nhớ của tập thể lớp</p>
+    </header>
+    <main>
+        <section class="timeline">
+            <!-- Timeline items -->
+            <div class="timeline-item left">
+                <img src="images/1.webp" alt="Ảnh kỷ yếu 1">
+            </div>
+            <div class="timeline-item right">
+                <img src="images/2.webp" alt="Ảnh kỷ yếu 2">
+            </div>
+            <div class="timeline-item left">
+                <img src="images/3.webp" alt="Ảnh kỷ yếu 3">
+            </div>
+            <div class="timeline-item right">
+                <img src="images/4.webp" alt="Ảnh kỷ yếu 4">
+            </div>
+            <div class="timeline-item left">
+                <img src="images/5.webp" alt="Ảnh kỷ yếu 5">
+            </div>
+            <div class="timeline-item right">
+                <img src="images/6.webp" alt="Ảnh kỷ yếu 6">
+            </div>
+            <div class="timeline-item left">
+                <img src="images/7.webp" alt="Ảnh kỷ yếu 7">
+            </div>
+            <div class="timeline-item right">
+                <img src="images/8.webp" alt="Ảnh kỷ yếu 8">
+            </div>
+            <div class="timeline-item left">
+                <img src="images/9.webp" alt="Ảnh kỷ yếu 9">
+            </div>
+            <div class="timeline-item right">
+                <img src="images/10.webp" alt="Ảnh kỷ yếu 10">
+            </div>
+            <div class="timeline-item left">
+                <img src="images/11.webp" alt="Ảnh kỷ yếu 11">
+            </div>
+            <div class="timeline-item right">
+                <img src="images/12.webp" alt="Ảnh kỷ yếu 12">
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; Kỷ yếu lớp - 2025</p>
+    </footer>
+
+<footer>
+    <p>&copy; Kỷ yếu lớp - 2025</p>
+</footer>
+<div id="lightbox" class="lightbox">
+    <span class="close">&times;</span>
+    <img class="lightbox-content" id="lightbox-img" src="" alt="Xem ảnh lớn">
+</div>
+</body>
+<script>
+document.querySelectorAll('.timeline-item img').forEach(img => {
+    img.addEventListener('click', function() {
+        document.getElementById('lightbox-img').src = this.src;
+        document.getElementById('lightbox').style.display = 'flex';
+    });
+});
+document.querySelector('.lightbox .close').onclick = function() {
+    document.getElementById('lightbox').style.display = 'none';
+};
+document.getElementById('lightbox').onclick = function(e) {
+    if (e.target === this) this.style.display = 'none';
+};
+</script>
+</html>
